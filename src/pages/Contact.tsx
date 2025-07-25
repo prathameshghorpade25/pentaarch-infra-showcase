@@ -260,14 +260,14 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-accent" />
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-muted-foreground">+91 98765 43210</p>
+                      <p className="text-muted-foreground">9139979899 / 7219326600</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-accent" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">info@pentaarch.com</p>
+                      <p className="text-muted-foreground">contact@pentaarch.com</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">

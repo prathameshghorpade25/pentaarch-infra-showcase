@@ -23,11 +23,11 @@ import {
 } from '@/components/ui/navigation-menu';
 
 const services = [
-  { name: 'Interior Design', href: '/services#interior', icon: Home },
-  { name: 'Decorative Finishes', href: '/services#finishes', icon: Briefcase },
-  { name: 'Flooring', href: '/services#flooring', icon: Home },
-  { name: 'Civil Contracting', href: '/services#civil', icon: Briefcase },
-  { name: 'Vastu Consultancy', href: '/services#vastu', icon: Info },
+  { name: 'Interior Design', href: '/services/interior-design', icon: Home },
+  { name: 'Decorative Finishes', href: '/services/decorative-finishes', icon: Briefcase },
+  { name: 'Flooring', href: '/services/flooring', icon: Home },
+  { name: 'Civil Contracting', href: '/services/civil-contracting', icon: Briefcase },
+  { name: 'Vastu Consultancy', href: '/services/vastu-consultancy', icon: Info },
 ];
 
 const Navigation = () => {
