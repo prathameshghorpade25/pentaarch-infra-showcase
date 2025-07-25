@@ -100,13 +100,13 @@ const Navigation = () => {
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
               src={pentaarchLogo} 
               alt="PentaArch Infra Services" 
-              className="h-12 md:h-14 w-auto object-contain max-w-[200px] md:max-w-[250px]"
+              className="h-14 md:h-16 lg:h-20 w-auto object-contain max-w-[250px] md:max-w-[290px] lg:max-w-[340px]"
             />
           </Link>
 

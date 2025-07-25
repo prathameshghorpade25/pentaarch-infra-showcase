@@ -6,16 +6,14 @@ import heroInterior from '@/assets/hero-interior.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroInterior}
-          alt="PentaArch Interior Design Showcase"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
-      </div>
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${heroInterior})`
+      }}
+    >
+      {/* Background Overlay */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">

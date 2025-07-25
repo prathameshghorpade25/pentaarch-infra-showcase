@@ -148,13 +148,13 @@ const About = () => {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardContent className="p-6 text-center">
                 <div className="w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
-                  AR
+                  GK
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Arjun Rao</h3>
-                <p className="text-accent font-medium mb-3">Founder & Principal Architect</p>
+                <h3 className="text-xl font-bold text-primary mb-2">Girish Kakad</h3>
+                <p className="text-accent font-medium mb-3">Civil Engineer & Vastushastra Consultant</p>
                 <p className="text-muted-foreground text-sm">
-                  15+ years in architectural design and project management. 
-                  Specialized in sustainable design and modern construction techniques.
+                  Expert in civil engineering and Vastushastra principles. 
+                  Combines technical expertise with traditional design wisdom to create harmonious spaces.
                 </p>
               </CardContent>
             </Card>
@@ -162,13 +162,13 @@ const About = () => {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardContent className="p-6 text-center">
                 <div className="w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
-                  PS
+                  HP
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Priya Sharma</h3>
-                <p className="text-accent font-medium mb-3">Head of Interior Design</p>
+                <h3 className="text-xl font-bold text-primary mb-2">Hrishikesh Pokharkar</h3>
+                <p className="text-accent font-medium mb-3">Interior Designer & Paint Manufacturer (Finix Paints)</p>
                 <p className="text-muted-foreground text-sm">
-                  Expert in space planning and luxury interiors. 
-                  Brings creative vision to every project with attention to detail.
+                  Expert interior designer and owner of Finix Paints. 
+                  Brings unique insights into both design aesthetics and premium paint solutions.
                 </p>
               </CardContent>
             </Card>
@@ -176,13 +176,13 @@ const About = () => {
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardContent className="p-6 text-center">
                 <div className="w-24 h-24 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
-                  VK
+                  KP
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Vikram Kumar</h3>
-                <p className="text-accent font-medium mb-3">Project Director</p>
+                <h3 className="text-xl font-bold text-primary mb-2">Kanchan Pokharkar</h3>
+                <p className="text-accent font-medium mb-3">Project Designer</p>
                 <p className="text-muted-foreground text-sm">
-                  Oversees construction operations and quality control. 
-                  Ensures timely delivery and adherence to specifications.
+                  Specialized in project design and planning. 
+                  Ensures seamless integration of design concepts with project execution.
                 </p>
               </CardContent>
             </Card>
