@@ -2,10 +2,10 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
-  Home, 
-  Palette, 
-  Square, 
-  Building, 
+  Sofa, 
+  PaintBucket, 
+  Layers, 
+  Hammer, 
   Compass,
   ArrowRight 
 } from 'lucide-react';
@@ -13,28 +13,28 @@ import { Link } from 'react-router-dom';
 
 const services = [
   {
-    icon: Home,
+    icon: Sofa,
     title: 'Interior Design',
     description: 'Transform your spaces with our contemporary and functional interior design solutions.',
     features: ['Space Planning', 'Furniture Selection', 'Lighting Design', 'Color Consultation'],
     href: '/services#interior'
   },
   {
-    icon: Palette,
+    icon: PaintBucket,
     title: 'Decorative Finishes',
     description: 'Premium wall finishes and decorative treatments that add character to your spaces.',
     features: ['Textured Paints', 'Wall Papers', 'Designer Panels', 'Custom Murals'],
     href: '/services#finishes'
   },
   {
-    icon: Square,
+    icon: Layers,
     title: 'Premium Flooring',
     description: 'High-quality flooring solutions for residential and commercial spaces.',
     features: ['Hardwood Floors', 'Luxury Vinyl', 'Natural Stone', 'Designer Tiles'],
     href: '/services#flooring'
   },
   {
-    icon: Building,
+    icon: Hammer,
     title: 'Civil Contracting',
     description: 'Complete construction and renovation services with attention to detail.',
     features: ['Home Construction', 'Renovations', 'Structural Work', 'Project Management'],

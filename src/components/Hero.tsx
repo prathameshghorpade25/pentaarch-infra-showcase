@@ -47,7 +47,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-4 h-auto border-white text-white hover:bg-white hover:text-primary"
+              className="text-lg px-8 py-4 h-auto border-white !text-white hover:bg-white hover:!text-primary font-medium"
               asChild
             >
               <Link to="/about">
@@ -60,7 +60,7 @@ const Hero = () => {
           <div className="mt-12 flex items-center gap-6 text-white/80">
             <div className="flex items-center gap-2">
               <Phone className="h-5 w-5" />
-              <span className="font-medium">+91 98765 43210</span>
+              <span className="font-medium">9139979899 / 7219326600</span>
             </div>
             <div className="hidden sm:block w-px h-6 bg-white/30"></div>
             <p className="text-sm">

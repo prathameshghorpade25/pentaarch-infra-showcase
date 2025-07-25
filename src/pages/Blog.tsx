@@ -17,7 +17,7 @@ const blogPosts = [
     category: 'Interior Tips',
     author: 'Hrishikesh Pokharkar',
     date: '2024-01-15',
-    image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04',
+    image: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=800',
     excerpt: 'Discover clever design strategies to maximize space in compact living areas without compromising on style or functionality.',
     readTime: '5 min read',
     tags: ['Small Spaces', 'Interior Design', 'Tips']
@@ -28,7 +28,7 @@ const blogPosts = [
     category: 'Vastu Advice',
     author: 'Girish Kakad',
     date: '2024-01-10',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800',
     excerpt: 'Learn how to apply ancient Vastu principles to create bedrooms that promote better sleep, health, and positive energy flow.',
     readTime: '7 min read',
     tags: ['Vastu', 'Bedroom', 'Energy']
@@ -39,7 +39,7 @@ const blogPosts = [
     category: 'Construction',
     author: 'Girish Kakad',
     date: '2024-01-05',
-    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800',
     excerpt: 'Expert advice on reducing construction costs without compromising quality, from material selection to project management.',
     readTime: '8 min read',
     tags: ['Construction', 'Budget', 'Tips']
@@ -50,7 +50,7 @@ const blogPosts = [
     category: 'Paint Guides',
     author: 'Hrishikesh Pokharkar',
     date: '2023-12-28',
-    image: 'https://images.unsplash.com/photo-1500673922987-e212871f11c22',
+    image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800',
     excerpt: 'Master the art of color selection with our comprehensive guide to choosing paint colors that enhance your space.',
     readTime: '6 min read',
     tags: ['Paint', 'Colors', 'Design']
@@ -61,7 +61,7 @@ const blogPosts = [
     category: 'Flooring',
     author: 'PentaArch Team',
     date: '2023-12-20',
-    image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800',
     excerpt: 'Compare different flooring materials, from hardwood to tiles, to find the perfect solution for your space and budget.',
     readTime: '9 min read',
     tags: ['Flooring', 'Materials', 'Comparison']
@@ -72,7 +72,7 @@ const blogPosts = [
     category: 'Interior Tips',
     author: 'Hrishikesh Pokharkar',
     date: '2023-12-15',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+    image: 'https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=800',
     excerpt: 'Stay ahead of the curve with the latest kitchen design trends that combine functionality with contemporary aesthetics.',
     readTime: '6 min read',
     tags: ['Kitchen', 'Trends', '2024']
@@ -95,13 +95,21 @@ const Blog = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-stone to-background">
-        <div className="container mx-auto px-4">
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600"
+            alt="Knowledge and Learning Center"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60" />
+        </div>
+        <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Knowledge Center
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+            <p className="text-xl md:text-2xl text-white/90 mb-8">
               Expert insights, tips, and guides to help you make informed decisions 
               about your interior design and construction projects.
             </p>

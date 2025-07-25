@@ -5,14 +5,17 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { 
   Menu, 
   ChevronDown, 
-  Home, 
-  Info, 
-  Briefcase, 
+  PaintBucket, 
+  Compass, 
+  Hammer, 
   Camera, 
   BookOpen, 
   Phone,
-  LogIn
+  LogIn,
+  Sofa,
+  Layers
 } from 'lucide-react';
+import pentaarchLogo from '@/assets/pentaarch-logo.png';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -23,11 +26,11 @@ import {
 } from '@/components/ui/navigation-menu';
 
 const services = [
-  { name: 'Interior Design', href: '/services/interior-design', icon: Home },
-  { name: 'Decorative Finishes', href: '/services/decorative-finishes', icon: Briefcase },
-  { name: 'Flooring', href: '/services/flooring', icon: Home },
-  { name: 'Civil Contracting', href: '/services/civil-contracting', icon: Briefcase },
-  { name: 'Vastu Consultancy', href: '/services/vastu-consultancy', icon: Info },
+  { name: 'Interior Design', href: '/services/interior-design', icon: Sofa },
+  { name: 'Decorative Finishes', href: '/services/decorative-finishes', icon: PaintBucket },
+  { name: 'Flooring', href: '/services/flooring', icon: Layers },
+  { name: 'Civil Contracting', href: '/services/civil-contracting', icon: Hammer },
+  { name: 'Vastu Consultancy', href: '/services/vastu-consultancy', icon: Compass },
 ];
 
 const Navigation = () => {
@@ -52,7 +55,7 @@ const Navigation = () => {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-foreground hover:text-accent font-medium">
+            <NavigationMenuTrigger className="text-foreground hover:text-accent font-medium bg-transparent data-[state=open]:bg-transparent h-auto p-0 [&>svg]:hidden text-base">
               Services
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -100,10 +103,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">P</span>
-            </div>
-            <span className="text-xl font-bold text-primary">PentaArch</span>
+            <img 
+              src={pentaarchLogo} 
+              alt="PentaArch Infra Services" 
+              className="h-12 md:h-14 w-auto object-contain max-w-[200px] md:max-w-[250px]"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -11,44 +11,49 @@ import {
 
 const testimonials = [
   {
-    name: 'Rajesh Sharma',
+    name: 'Prathamesh Ghorpade',
     role: 'Homeowner',
     project: 'Complete Home Interior',
     rating: 5,
     testimonial: 'PentaArch transformed our house into a dream home. Their attention to detail and creative solutions exceeded our expectations. The team was professional and completed the project on time.',
-    image: 'RS'
+    image: 'PG',
+    verified: true
   },
   {
-    name: 'Priya Patel',
+    name: 'Sakshi Gavande',
     role: 'Business Owner',
     project: 'Office Interior Design',
     rating: 5,
     testimonial: 'Outstanding work on our office renovation! The space is now more functional and aesthetically pleasing. The Vastu consultation was an added bonus that made a real difference.',
-    image: 'PP'
+    image: 'SG',
+    verified: true
   },
   {
-    name: 'Dr. Anil Kumar',
-    role: 'Medical Practitioner',
-    project: 'Clinic Design & Construction',
+    name: 'Ritesh Bhingare',
+    role: 'Property Developer',
+    project: 'Civil Construction & Flooring',
     rating: 5,
     testimonial: 'From initial planning to final execution, PentaArch delivered exceptional quality. Their team understood our requirements perfectly and created a space that works beautifully.',
-    image: 'AK'
+    image: 'RB',
+    verified: true
   },
   {
-    name: 'Meera Reddy',
+    name: 'Dhanishtha Bankar',
     role: 'Homeowner',
-    project: 'Kitchen & Flooring',
+    project: 'Kitchen & Decorative Finishes',
     rating: 5,
-    testimonial: 'The new kitchen and premium flooring have completely transformed our home. The quality of materials and craftsmanship is excellent. Highly recommend PentaArch!',
-    image: 'MR'
+    testimonial: 'The new kitchen and premium decorative finishes have completely transformed our home. The quality of materials and craftsmanship is excellent. Highly recommend PentaArch!',
+    image: 'DB',
+    verified: true
   },
   {
-    name: 'Vikram Industries',
+    name: 'Sai Deshmukh',
     role: 'Corporate Client',
-    project: 'Warehouse Construction',
+    project: 'Vastu Consultancy & Construction',
     rating: 5,
-    testimonial: 'Professional civil contracting services with timely delivery. The construction quality is top-notch and the project management was seamless throughout.',
-    image: 'VI'
+    testimonial: 'Professional civil contracting services with timely delivery and excellent Vastu guidance. The construction quality is top-notch and the project management was seamless throughout.',
+    image: 'SD',
+    verified: true
   }
 ];
 

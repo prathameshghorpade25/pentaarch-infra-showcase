@@ -14,23 +14,25 @@ const projects = [
     id: 1,
     name: 'Modern Luxury Apartment',
     category: 'Interior Design',
-    image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop&crop=center&q=80',
     images: [
-      'https://images.unsplash.com/photo-1721322800607-8c38375eef04',
-      'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952',
-      'https://images.unsplash.com/photo-1494891848038-7bd202a2afeb'
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop&crop=center&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop&crop=center&q=80',
+      'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1200&h=800&fit=crop&crop=center&q=80',
+      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&h=800&fit=crop&crop=center&q=80',
+      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=800&fit=crop&crop=center&q=80'
     ],
-    description: 'Complete interior transformation of a 3BHK apartment featuring contemporary design elements, smart storage solutions, and premium finishes.',
+    description: 'Complete interior transformation of a 3BHK apartment featuring contemporary design elements, smart storage solutions, and premium finishes with modern aesthetic appeal.',
     tags: ['Interior', 'Modern', 'Luxury']
   },
   {
     id: 2,
     name: 'Textured Wall Finishes',
     category: 'Wall Finishes',
-    image: 'https://images.unsplash.com/photo-1500673922987-e212871f11c22',
+    image: 'https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=800',
     images: [
-      'https://images.unsplash.com/photo-1500673922987-e212871f11c22',
-      'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e'
+      'https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=800',
+      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800'
     ],
     description: 'Artistic textured wall finishes that create visual depth and character throughout this residential project.',
     tags: ['Decorative', 'Texture', 'Artistic']
@@ -39,10 +41,10 @@ const projects = [
     id: 3,
     name: 'Premium Hardwood Flooring',
     category: 'Flooring',
-    image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800',
     images: [
-      'https://images.unsplash.com/photo-1527576539890-dfa815648363',
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158'
+      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800',
+      'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800'
     ],
     description: 'Installation of premium engineered hardwood flooring with a sophisticated herringbone pattern in a luxury villa.',
     tags: ['Flooring', 'Hardwood', 'Premium']
@@ -51,10 +53,10 @@ const projects = [
     id: 4,
     name: 'Residential Construction',
     category: 'Civil Projects',
-    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800',
     images: [
-      'https://images.unsplash.com/photo-1433086966358-54859d0ed716',
-      'https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace'
+      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800'
     ],
     description: 'Complete turnkey construction of a modern residential home from foundation to finishing with Vastu compliance.',
     tags: ['Construction', 'Turnkey', 'Vastu']
@@ -63,10 +65,10 @@ const projects = [
     id: 5,
     name: 'Designer Office Space',
     category: 'Interior Design',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
     images: [
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-      'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7'
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
+      'https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=800'
     ],
     description: 'Contemporary office interior design focusing on productivity, comfort, and brand identity integration.',
     tags: ['Office', 'Corporate', 'Modern']
@@ -75,10 +77,10 @@ const projects = [
     id: 6,
     name: 'Natural Stone Flooring',
     category: 'Flooring',
-    image: 'https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800',
     images: [
-      'https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151',
-      'https://images.unsplash.com/photo-1496307653780-4288777d4833'
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800',
+      'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800'
     ],
     description: 'Elegant natural stone flooring installation featuring imported marble and granite in luxury residential spaces.',
     tags: ['Stone', 'Marble', 'Luxury']
@@ -98,13 +100,21 @@ const Portfolio = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-stone to-background">
-        <div className="container mx-auto px-4">
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600"
+            alt="Professional Architecture Portfolio Showcase"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60" />
+        </div>
+        <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Our Portfolio
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+            <p className="text-xl md:text-2xl text-white/90 mb-8">
               Explore our showcase of completed projects that demonstrate our 
               commitment to excellence and innovative design solutions.
             </p>
@@ -186,7 +196,8 @@ const Portfolio = () => {
                       key={index}
                       src={image}
                       alt={`${selectedProject.name} ${index + 1}`}
-                      className="w-full h-64 lg:h-48 object-cover"
+                      className="w-full h-64 lg:h-56 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
                     />
                   ))}
                 </div>

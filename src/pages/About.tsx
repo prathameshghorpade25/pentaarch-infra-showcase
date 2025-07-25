@@ -12,13 +12,21 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-stone to-background">
-        <div className="container mx-auto px-4">
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600"
+            alt="Modern Architecture and Design"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60" />
+        </div>
+        <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               About PentaArch
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+            <p className="text-xl md:text-2xl text-white/90 mb-8">
               Transforming spaces with 15+ years of expertise in design, construction, 
               and innovative solutions that stand the test of time.
             </p>
