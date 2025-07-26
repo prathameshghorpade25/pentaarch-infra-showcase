@@ -15,36 +15,36 @@ const services = [
   {
     icon: Sofa,
     title: 'Interior Design',
-    description: 'Transform your spaces with our contemporary and functional interior design solutions.',
-    features: ['Space Planning', 'Furniture Selection', 'Lighting Design', 'Color Consultation'],
+    description: 'Crafting personalized living and working environments that reflect your unique style while maximizing functionality.',
+    features: ['Custom Space Planning', 'Bespoke Furniture Design', 'Ambient Lighting Systems', 'Material & Color Curation'],
     href: '/services#interior'
   },
   {
     icon: PaintBucket,
     title: 'Decorative Finishes',
-    description: 'Premium wall finishes and decorative treatments that add character to your spaces.',
-    features: ['Textured Paints', 'Wall Papers', 'Designer Panels', 'Custom Murals'],
+    description: 'Artisan-quality wall treatments and surface finishes that transform ordinary walls into design statements.',
+    features: ['Venetian Plaster', 'Specialty Paint Effects', '3D Wall Panels', 'Hand-painted Murals'],
     href: '/services#finishes'
   },
   {
     icon: Layers,
     title: 'Premium Flooring',
-    description: 'High-quality flooring solutions for residential and commercial spaces.',
-    features: ['Hardwood Floors', 'Luxury Vinyl', 'Natural Stone', 'Designer Tiles'],
+    description: 'Superior flooring installations using premium materials, combining durability with aesthetic excellence.',
+    features: ['Engineered Hardwood', 'Italian Marble', 'Luxury Vinyl Plank', 'Artisan Tiles'],
     href: '/services#flooring'
   },
   {
     icon: Hammer,
     title: 'Civil Contracting',
-    description: 'Complete construction and renovation services with attention to detail.',
-    features: ['Home Construction', 'Renovations', 'Structural Work', 'Project Management'],
+    description: 'Full-scale construction and renovation expertise with meticulous attention to structural integrity and timeline adherence.',
+    features: ['Residential Construction', 'Commercial Renovations', 'Structural Engineering', 'End-to-End Project Management'],
     href: '/services#civil'
   },
   {
     icon: Compass,
     title: 'Vastu Consultancy',
-    description: 'Traditional Vastu principles integrated with modern design aesthetics.',
-    features: ['Site Analysis', 'Layout Planning', 'Energy Flow', 'Design Integration'],
+    description: 'Ancient Vastu Shastra wisdom seamlessly integrated with contemporary architectural principles for harmonious spaces.',
+    features: ['Comprehensive Site Analysis', 'Vastu-Compliant Planning', 'Energy Optimization', 'Modern-Traditional Fusion'],
     href: '/services#vastu'
   }
 ];
@@ -55,11 +55,11 @@ const ServicesOverview = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Our Expertise
+            Five Pillars of Excellence
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From concept to completion, we offer comprehensive design and construction services 
-            that bring your vision to life with precision and artistry.
+            PentaArch's comprehensive approach combines traditional Indian wisdom with contemporary design innovation. 
+            Each service reflects our commitment to creating spaces that are both beautiful and harmonious.
           </p>
         </div>
 

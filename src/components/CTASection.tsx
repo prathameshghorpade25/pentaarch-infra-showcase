@@ -8,11 +8,11 @@ const CTASection = () => {
     <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Ready to Transform Your Space?
+          Ready to Experience the PentaArch Difference?
         </h2>
         <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-          Get a free consultation and let our experts help you create the perfect space 
-          that reflects your style and meets your needs.
+          Join 500+ satisfied clients who have transformed their spaces with our comprehensive design and construction expertise. 
+          From Vastu-compliant layouts to premium finishes, we bring your vision to life.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

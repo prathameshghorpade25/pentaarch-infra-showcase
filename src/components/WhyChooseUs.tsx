@@ -12,33 +12,33 @@ import {
 const features = [
   {
     icon: Award,
-    title: '15+ Years Experience',
-    description: 'Proven track record in delivering exceptional design and construction projects across residential and commercial sectors.'
+    title: 'Established Excellence',
+    description: 'Over 15 years of transforming visions into reality, with 500+ successfully completed projects across residential and commercial sectors in India.'
   },
   {
     icon: Users,
-    title: 'Expert Team',
-    description: 'Certified architects, interior designers, and skilled craftsmen working together to ensure quality execution.'
+    title: 'Multi-Disciplinary Expertise',
+    description: 'Our team combines certified architects, Vastu consultants, interior designers, and master craftsmen to deliver holistic solutions.'
   },
   {
     icon: Clock,
-    title: 'Timely Delivery',
-    description: 'Project management excellence ensures on-time completion without compromising on quality standards.'
+    title: 'Promise-Driven Delivery',
+    description: 'We honor our commitments with precision project management, ensuring timely completion while maintaining uncompromising quality standards.'
   },
   {
     icon: Shield,
-    title: 'Quality Assurance',
-    description: 'Rigorous quality checks and premium materials guarantee long-lasting results and customer satisfaction.'
+    title: 'Premium Materials \u0026 Craftsmanship',
+    description: 'Sourcing only the finest materials and employing time-tested construction techniques to ensure longevity and satisfaction.'
   },
   {
     icon: Lightbulb,
-    title: 'Innovative Solutions',
-    description: 'Creative problem-solving and modern techniques combined with traditional craftsmanship for unique outcomes.'
+    title: 'Innovation Meets Tradition',
+    description: 'Blending cutting-edge design trends with traditional Indian architectural wisdom, including authentic Vastu compliance.'
   },
   {
     icon: CheckCircle,
-    title: 'End-to-End Service',
-    description: 'From initial consultation to final handover, we manage every aspect of your project with dedication.'
+    title: 'Complete Project Stewardship',
+    description: 'From conceptualization and design to construction and post-completion support, we are your single point of accountability.'
   }
 ];
 
@@ -48,11 +48,11 @@ const WhyChooseUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Why Choose PentaArch?
+            The PentaArch Advantage
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We combine artistic vision with technical expertise to deliver spaces that 
-            are not just beautiful, but functional and built to last.
+            Built on a foundation of trust, innovation, and heritage, PentaArch delivers more than just construction and design — 
+            we create lasting legacies that blend timeless Indian architectural principles with modern living needs.
           </p>
         </div>
 

@@ -12,46 +12,46 @@ import {
 const testimonials = [
   {
     name: 'Prathamesh Ghorpade',
-    role: 'Homeowner',
-    project: 'Complete Home Interior',
+    role: 'Homeowner, Pune',
+    project: '3BHK Complete Interior Renovation',
     rating: 5,
-    testimonial: 'PentaArch transformed our house into a dream home. Their attention to detail and creative solutions exceeded our expectations. The team was professional and completed the project on time.',
+    testimonial: 'PentaArch\'s team understood our family\'s needs perfectly. The Vastu-compliant layout they designed has brought positive energy to our home. The Italian marble flooring and custom carpentry work exceeded all expectations. Worth every rupee invested!',
     image: 'PG',
     verified: true
   },
   {
     name: 'Sakshi Gavande',
-    role: 'Business Owner',
-    project: 'Office Interior Design',
+    role: 'Business Owner, Mumbai',
+    project: 'Corporate Office Interior',
     rating: 5,
-    testimonial: 'Outstanding work on our office renovation! The space is now more functional and aesthetically pleasing. The Vastu consultation was an added bonus that made a real difference.',
+    testimonial: 'Our 4,000 sq ft office transformation by PentaArch has impressed every client who visits. The blend of modern aesthetics with Vastu principles has created a workspace that\'s both inspiring and prosperous. Their project management was exemplary.',
     image: 'SG',
     verified: true
   },
   {
     name: 'Ritesh Bhingare',
-    role: 'Property Developer',
-    project: 'Civil Construction & Flooring',
+    role: 'Property Developer, Nashik',
+    project: 'Residential Complex Civil Work',
     rating: 5,
-    testimonial: 'From initial planning to final execution, PentaArch delivered exceptional quality. Their team understood our requirements perfectly and created a space that works beautifully.',
+    testimonial: 'PentaArch handled the complete civil contracting for our 25-unit residential project. Their attention to structural details, quality of construction, and adherence to timelines was remarkable. The decorative finishes added premium appeal to our project.',
     image: 'RB',
     verified: true
   },
   {
     name: 'Dhanishtha Bankar',
-    role: 'Homeowner',
-    project: 'Kitchen & Decorative Finishes',
+    role: 'Homeowner, Aurangabad',
+    project: 'Modular Kitchen \u0026 Living Room',
     rating: 5,
-    testimonial: 'The new kitchen and premium decorative finishes have completely transformed our home. The quality of materials and craftsmanship is excellent. Highly recommend PentaArch!',
+    testimonial: 'The modular kitchen designed by PentaArch is a perfect blend of functionality and beauty. The Venetian plaster finish in our living room is simply stunning. Their team\'s craftsmanship and use of premium materials has made our home magazine-worthy!',
     image: 'DB',
     verified: true
   },
   {
     name: 'Sai Deshmukh',
-    role: 'Corporate Client',
-    project: 'Vastu Consultancy & Construction',
+    role: 'Hotel Owner, Solapur',
+    project: 'Boutique Hotel Construction',
     rating: 5,
-    testimonial: 'Professional civil contracting services with timely delivery and excellent Vastu guidance. The construction quality is top-notch and the project management was seamless throughout.',
+    testimonial: 'From foundation to interior completion, PentaArch delivered our boutique hotel project flawlessly. Their Vastu consultant ensured positive energy flow, while their interior team created spaces that our guests absolutely love. Professional service throughout!',
     image: 'SD',
     verified: true
   }

@@ -19,13 +19,13 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Precision in Design.<br />
-            <span className="text-accent">Perfection</span> in Execution.
+            Where <span className="text-accent">Architecture</span> Meets.<br />
+            <span className="text-accent">Artistry</span>.
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            Transform your spaces with PentaArch's expertise in interior design, 
-            civil contracting, decorative finishes, and premium flooring solutions.
+            PentaArch Infra Services - Your trusted partner for comprehensive design solutions. 
+            From Vastu-compliant layouts to premium finishes, we create spaces that inspire and endure.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
