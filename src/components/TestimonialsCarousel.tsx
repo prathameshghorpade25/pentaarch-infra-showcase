@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 import {
   Carousel,
@@ -62,22 +63,40 @@ const TestimonialsCarousel = () => {
     <section className="py-20 bg-stone">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-primary mb-6"
+          >
             What Our Clients Say
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-xl text-muted-foreground max-w-3xl mx-auto"
+          >
             Don't just take our word for it. Hear from our satisfied clients about 
             their experience working with PentaArch.
-          </p>
+          </motion.p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-5xl mx-auto"
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
         >
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
@@ -113,18 +132,39 @@ const TestimonialsCarousel = () => {
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
-        </Carousel>
+          </Carousel>
+        </motion.div>
 
         {/* Trust Indicators */}
-        <div className="mt-16 text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
           <p className="text-muted-foreground mb-8">Trusted by 500+ clients across India</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="text-lg font-semibold text-primary">★★★★★ Google Reviews</div>
-            <div className="text-lg font-semibold text-primary">ISO Certified</div>
-            <div className="text-lg font-semibold text-primary">15+ Years</div>
-            <div className="text-lg font-semibold text-primary">500+ Projects</div>
+            {[
+              '★★★★★ Google Reviews',
+              'ISO Certified', 
+              '15+ Years',
+              '500+ Projects'
+            ].map((indicator, index) => (
+              <motion.div 
+                key={indicator}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.1 }}
+                className="text-lg font-semibold text-primary"
+              >
+                {indicator}
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

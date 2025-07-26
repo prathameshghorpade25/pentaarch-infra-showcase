@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   Sofa, 
@@ -54,25 +55,47 @@ const ServicesOverview = () => {
     <section className="py-20 bg-stone">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-primary mb-6"
+          >
             Five Pillars of Excellence
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-xl text-muted-foreground max-w-3xl mx-auto"
+          >
             PentaArch's comprehensive approach combines traditional Indian wisdom with contemporary design innovation. 
             Each service reflects our commitment to creating spaces that are both beautiful and harmonious.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
-            <Card 
+            <motion.div
               key={service.title}
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-0 shadow-md"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="group"
             >
+              <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 shadow-md hover:shadow-accent/20">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <motion.div 
+                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center"
+                >
                   <service.icon className="h-8 w-8 text-white" />
-                </div>
+                </motion.div>
                 <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
                 <CardDescription className="text-muted-foreground">
                   {service.description}
@@ -98,18 +121,33 @@ const ServicesOverview = () => {
                   </Link>
                 </Button>
               </CardContent>
-            </Card>
+              </Card>
+            </motion.div>
           ))}
         </div>
 
-        <div className="text-center">
-          <Button variant="professional" size="lg" className="px-8 py-4 text-lg" asChild>
-            <Link to="/services">
-              View All Services
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button variant="professional" size="lg" className="px-8 py-4 text-lg hover:shadow-lg transition-all duration-300" asChild>
+              <Link to="/services">
+                View All Services
+                <motion.div 
+                  className="inline-block"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ArrowRight className="h-5 w-5" />
+                </motion.div>
+              </Link>
+            </Button>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
