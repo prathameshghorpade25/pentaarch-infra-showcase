@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import NewsletterSubscription from '@/components/NewsletterSubscription';
+// import NewsletterTester from '@/components/NewsletterTester';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -238,6 +239,9 @@ const Blog = () => {
               </Button>
             ))}
           </div>
+
+          {/* Newsletter Testing (Development Only) */}
+          {/* <NewsletterTester /> */}
 
           {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,17 +1,81 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Calendar, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroInterior from '@/assets/hero-interior.jpg';
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [retryCount, setRetryCount] = useState(0);
+
+  // Image loading function with retry mechanism
+  const loadImage = useCallback((retryAttempt = 0) => {
+    const img = new Image();
+    
+    img.onload = () => {
+      setImageLoaded(true);
+      setIsLoading(false);
+      setImageError(false);
+    };
+    
+    img.onerror = () => {
+      if (retryAttempt < 2) {
+        // Retry loading up to 2 times
+        setTimeout(() => {
+          setRetryCount(prev => prev + 1);
+          loadImage(retryAttempt + 1);
+        }, 1000 * (retryAttempt + 1)); // Exponential backoff
+      } else {
+        setImageError(true);
+        setIsLoading(false);
+      }
+    };
+    
+    // Add cache busting for development
+    const imageSrc = process.env.NODE_ENV === 'development' 
+      ? `${heroInterior}?t=${Date.now()}`
+      : heroInterior;
+    
+    img.src = imageSrc;
+  }, []);
+
+  // Preload the image to ensure it's available
+  useEffect(() => {
+    loadImage();
+    
+    // Fallback timeout in case image loading takes too long
+    const timeout = setTimeout(() => {
+      if (!imageLoaded && !imageError) {
+        setIsLoading(false);
+      }
+    }, 5000); // Increased timeout for slower connections
+    
+    return () => clearTimeout(timeout);
+  }, [loadImage]);
+
   return (
-    <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url(${heroInterior})`
-      }}
-    >
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        {/* Loading state with gradient background */}
+        <div className="w-full h-full bg-gradient-to-br from-primary via-primary/90 to-primary/70"></div>
+        
+        {/* Actual background image with fade-in */}
+        {imageLoaded && !imageError && (
+          <img 
+            src={heroInterior} 
+            alt="PentaArch Interior Design Hero" 
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            loading="eager"
+            decoding="sync"
+          />
+        )}
+      </div>
+      
       {/* Background Overlay */}
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
 
