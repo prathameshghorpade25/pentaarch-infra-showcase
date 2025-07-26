@@ -79,6 +79,16 @@ const Navigation = () => {
         </Link>
       </motion.div>
       
+      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <Link 
+          to="/how-it-works" 
+          className="relative text-foreground hover:text-accent transition-colors font-medium group"
+        >
+          How It Works
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+      </motion.div>
+      
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -229,6 +239,13 @@ const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   About Us
+                </Link>
+                <Link 
+                  to="/how-it-works" 
+                  className="text-lg font-medium hover:text-accent transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  How It Works
                 </Link>
                 
                 <div className="py-2">
