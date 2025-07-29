@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, CheckCircle, MessageCircle } from 'lucide-react';
@@ -339,7 +338,6 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      <WhatsAppFloat />
     </div>
   );
 };

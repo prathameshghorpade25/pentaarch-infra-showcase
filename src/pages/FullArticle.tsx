@@ -12,7 +12,6 @@ import {
   BreadcrumbSeparator 
 } from '@/components/ui/breadcrumb';
 import Navigation from '@/components/Navigation';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -245,7 +244,6 @@ const FullArticle = () => {
         </div>
       </section>
       
-      <WhatsAppFloat />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -247,7 +246,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <WhatsAppFloat />
     </div>
   );
 };

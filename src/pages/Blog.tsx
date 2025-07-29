@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
 import NewsletterSubscription from '@/components/NewsletterSubscription';
 // import NewsletterTester from '@/components/NewsletterTester';
 import { Button } from '@/components/ui/button';
@@ -334,7 +333,6 @@ const Blog = () => {
         </div>
       </section>
 
-      <WhatsAppFloat />
     </div>
   );
 };

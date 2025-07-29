@@ -40,54 +40,56 @@ const Navigation = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
-  // Handle navbar visibility on scroll
+  // Handle navbar visibility on scroll with debouncing
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      if (currentScrollY < lastScrollY || currentScrollY < 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-      
-      setLastScrollY(currentScrollY);
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY < lastScrollY || currentScrollY < 50) {
+          setIsVisible(true);
+        } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false);
+        }
+        
+        setLastScrollY(currentScrollY);
+      }, 10); // Debounce scroll events
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutId);
+    };
   }, [lastScrollY]);
 
-  const NavItems = () => (
+  const NavItems = React.memo(() => (
     <>
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <Link 
-          to="/" 
-          className="relative text-foreground hover:text-accent transition-colors font-medium group"
-        >
-          Home
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-      </motion.div>
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <Link 
-          to="/about" 
-          className="relative text-foreground hover:text-accent transition-colors font-medium group"
-        >
-          About Us
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-      </motion.div>
+      <Link 
+        to="/" 
+        className="relative text-foreground hover:text-accent transition-colors font-medium group"
+      >
+        Home
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+      </Link>
+      <Link 
+        to="/about" 
+        className="relative text-foreground hover:text-accent transition-colors font-medium group"
+      >
+        About Us
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+      </Link>
       
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <Link 
-          to="/how-it-works" 
-          className="relative text-foreground hover:text-accent transition-colors font-medium group"
-        >
-          How It Works
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-      </motion.div>
+      <Link 
+        to="/how-it-works" 
+        className="relative text-foreground hover:text-accent transition-colors font-medium group"
+      >
+        How It Works
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+      </Link>
       
       <NavigationMenu>
         <NavigationMenuList>
@@ -97,69 +99,48 @@ const Navigation = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <motion.div 
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                className="grid w-[400px] gap-3 p-4 bg-background/95 backdrop-blur-md border border-border rounded-lg shadow-xl"
-              >
-                {services.map((service, index) => (
-                  <motion.div
+              <div className="grid w-[380px] gap-2 p-3 bg-background/95 backdrop-blur-md border border-border rounded-lg shadow-xl">
+                {services.map((service) => (
+                  <Link
                     key={service.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    to={service.href}
+                    className="flex items-center gap-3 p-3 rounded-md hover:bg-stone transition-all duration-200 group"
                   >
-                    <Link
-                      to={service.href}
-                      className="flex items-center gap-3 p-3 rounded-md hover:bg-stone transition-all duration-300 hover:scale-105 hover:shadow-md group"
-                    >
-                      <motion.div 
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.3 }}
-                        className="p-1 rounded-full bg-accent/10 group-hover:bg-accent/20"
-                      >
-                        <service.icon className="h-5 w-5 text-accent" />
-                      </motion.div>
-                      <span className="font-medium">{service.name}</span>
-                    </Link>
-                  </motion.div>
+                    <div className="p-1 rounded-full bg-accent/10 group-hover:bg-accent/20 transition-colors">
+                      <service.icon className="h-4 w-4 text-accent" />
+                    </div>
+                    <span className="font-medium text-sm">{service.name}</span>
+                  </Link>
                 ))}
-              </motion.div>
+              </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
 
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <Link 
-          to="/portfolio" 
-          className="relative text-foreground hover:text-accent transition-colors font-medium group"
-        >
-          Portfolio
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-      </motion.div>
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <Link 
-          to="/blog" 
-          className="relative text-foreground hover:text-accent transition-colors font-medium group"
-        >
-          Blog
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-      </motion.div>
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <Link 
-          to="/contact" 
-          className="relative text-foreground hover:text-accent transition-colors font-medium group"
-        >
-          Contact
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-      </motion.div>
+      <Link 
+        to="/portfolio" 
+        className="relative text-foreground hover:text-accent transition-colors font-medium group"
+      >
+        Portfolio
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+      </Link>
+      <Link 
+        to="/blog" 
+        className="relative text-foreground hover:text-accent transition-colors font-medium group"
+      >
+        Blog
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+      </Link>
+      <Link 
+        to="/contact" 
+        className="relative text-foreground hover:text-accent transition-colors font-medium group"
+      >
+        Contact
+        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+      </Link>
     </>
-  );
+  ));
 
   return (
     <motion.nav 
@@ -176,45 +157,27 @@ const Navigation = () => {
           className="flex items-center justify-between h-20"
         >
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link to="/" className="flex items-center space-x-2">
-              <motion.img 
-                src={pentaarchLogo} 
-                alt="PentaArch Infra Services" 
-                className="h-14 md:h-16 lg:h-20 w-auto object-contain max-w-[250px] md:max-w-[290px] lg:max-w-[340px] transition-all duration-300 hover:brightness-110"
-                whileHover={{ rotate: [0, -5, 5, 0] }}
-                transition={{ duration: 0.6 }}
-              />
-            </Link>
-          </motion.div>
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-90 transition-opacity">
+            <img 
+              src={pentaarchLogo} 
+              alt="PentaArch Infra Services" 
+              className="h-12 md:h-14 lg:h-16 w-auto object-contain max-w-[220px] md:max-w-[260px] lg:max-w-[300px] transition-all duration-300"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <NavItems />
           </div>
 
-          {/* Desktop Login Button */}
+          {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button variant="outline-accent" size="sm" className="group hover:shadow-lg transition-all duration-300" asChild>
-                <Link to="/login">
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <LogIn className="h-4 w-4" />
-                  </motion.div>
-                  Login
-                  <motion.div
-                    className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    initial={{ x: -10 }}
-                    whileHover={{ x: 0 }}
-                  >
-                    →
-                  </motion.div>
-                </Link>
-              </Button>
-            </motion.div>
+            <Button variant="professional" size="sm" className="hover:shadow-lg transition-all duration-300" asChild>
+              <Link to="/contact">
+                <Phone className="h-4 w-4 mr-2" />
+                Get Quote
+              </Link>
+            </Button>
           </div>
 
           {/* Mobile Menu */}
@@ -288,10 +251,10 @@ const Navigation = () => {
                 </Link>
                 
                 <div className="pt-4 border-t border-border">
-                  <Button variant="outline-accent" className="w-full" asChild>
-                    <Link to="/login" onClick={() => setIsOpen(false)}>
-                      <LogIn className="h-4 w-4" />
-                      Login
+                  <Button variant="professional" className="w-full" asChild>
+                    <Link to="/contact" onClick={() => setIsOpen(false)}>
+                      <Phone className="h-4 w-4 mr-2" />
+                      Get Quote
                     </Link>
                   </Button>
                 </div>

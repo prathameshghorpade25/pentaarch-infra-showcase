@@ -5,7 +5,6 @@ import ServicesOverview from '@/components/ServicesOverview';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import CTASection from '@/components/CTASection';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
 
 const Index = () => {
   return (
@@ -18,7 +17,6 @@ const Index = () => {
       <TestimonialsCarousel />
       <CTASection />
       </main>
-      <WhatsAppFloat />
     </div>
   );
 };

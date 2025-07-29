@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -349,7 +348,6 @@ const Contact = () => {
         </div>
       </section>
 
-      <WhatsAppFloat />
     </div>
   );
 };

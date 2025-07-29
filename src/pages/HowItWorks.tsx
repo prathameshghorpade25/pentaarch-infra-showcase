@@ -5,7 +5,6 @@ import ProcessSteps from '@/components/how-it-works/ProcessSteps';
 import TrustBuilders from '@/components/how-it-works/TrustBuilders';
 import ProcessTestimonials from '@/components/how-it-works/ProcessTestimonials';
 import ProcessCTA from '@/components/how-it-works/ProcessCTA';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
 
 const HowItWorks = () => {
   return (
@@ -18,7 +17,6 @@ const HowItWorks = () => {
         <ProcessTestimonials />
         <ProcessCTA />
       </main>
-      <WhatsAppFloat />
     </div>
   );
 };
